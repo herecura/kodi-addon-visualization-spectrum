@@ -2,8 +2,8 @@
 # Maintainer: BlackEagle <ike.devolder@gmail.com>>
 
 pkgname=kodi-addon-visualization-spectrum
-_commit=5a5f5d2
-pkgver=20170518.5a5f5d2
+_commit=9ff9d71
+pkgver=20170522.9ff9d71
 pkgrel=1
 pkgdesc="Spectrum visualizer for Kodi"
 arch=('i686' 'x86_64')
