@@ -4,7 +4,7 @@
 pkgname=kodi-addon-visualization-spectrum
 epoch=1
 pkgver=1.1.4
-pkgrel=1
+pkgrel=2
 pkgdesc="Spectrum visualizer for Kodi"
 arch=('x86_64')
 url='https://github.com/notspiff/visualization.spectrum'
