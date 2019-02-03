@@ -3,7 +3,7 @@
 pkgname=kodi-addon-visualization-spectrum
 epoch=1
 pkgver=2.0.3
-pkgrel=6
+pkgrel=7
 pkgdesc="Spectrum visualizer for Kodi"
 arch=('x86_64')
 url='https://github.com/xbmc/visualization.spectrum'
@@ -16,16 +16,17 @@ sha512sums=('ed4a67a9bd1b02bb5d33791bf1953075d993075ec473ac858e9154c867b51ed2ffc
 
 build() {
     cd "visualization.spectrum-$pkgver"
-	cmake \
-		-DCMAKE_INSTALL_PREFIX=/usr \
-		-DCMAKE_BUILD_TYPE=Release \
-		-DBUILD_SHARED_LIBS=1 \
-		-DUSE_LTO=1
-	make
+    cmake \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DBUILD_SHARED_LIBS=1 \
+        -DUSE_LTO=1 \
+        .
+    make
 }
 
 package() {
     cd "visualization.spectrum-$pkgver"
-	make DESTDIR="$pkgdir/" install
+    make DESTDIR="$pkgdir/" install
 }
 
